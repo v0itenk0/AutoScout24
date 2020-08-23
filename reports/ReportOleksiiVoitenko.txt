@@ -1,0 +1,112 @@
+The proposed solution has the following classes (see /src/ folder): 
+•	Main.java
+•	Tests.java
+•	CSVReader.java
+•	ValueComparator.java
+For development I used Intellij Idea (student version with Java 8).
+To run the application you have to use the function main(String[] args) in the Main.java
+In order to run the tests you can uncomment the lines that you need in main(String[] args):
+//          //Tests
+//          //---------------Report 1 ------------------------//
+//          Tests.testReport1Generate_BasicSuccess();
+//          Tests.testReport1Generate_EmptyFile();
+//          Tests.testReport1Generate_noPrivateResults();
+//          Tests.testReport1Generate_SmallRealData();
+//          //---------------Report 2 ------------------------//
+//          Tests.testReport2Generate_EmptyFile();
+//          Tests.testReport2Generate_TwoRecords();
+//          Tests.testReport2Generate_SmallRealData();
+//          //---------------Report 3 ------------------------//
+//          Tests.testReport3Generate_TwoRecords();
+//          Tests.testReport3Generate_NoContactForListing();
+//          Tests.testReport3Generate_EmptyFiles();
+//          Tests.testReport3Generate_SmallRealData();
+//          //---------------Report 4 ------------------------//
+//          Tests.testReport4Generate_EmptyFiles();
+//          Tests.testReport4Generate_WrongId();
+//          Tests.testReport4Generate_SmallRealData();
+
+
+
+
+
+
+
+
+
+
+
+The result of application should be:
+
+File: C:/Autoscout24Voitenko/CSV/listings.csvwas read successfully. Number of records - 301
+File: C:/Autoscout24Voitenko/CSV/contacts.csvwas read successfully. Number of records - 14096
+1 - Average Listing Selling Price per Seller Type
++-----------------+-------------------+---------------------+
+| Seller Type     | Average in Euro   | Number of records   |
++-----------------+-------------------+---------------------+
+| private         | € 26080.0         | 75                  |
+| dealer          | € 25037.0         | 136                 |
+| other           | € 25318.0         | 89                  |
++-----------------+-------------------+---------------------+
+2 - Percentual distribution of available cars by Make
++-----------------+-------------------+
+| Make            | Distribution      |
++-----------------+-------------------+
+| "Mercedes-Benz" | 16.33%            | 
+| "Toyota"        | 16.0%             | 
+| "Audi"          | 14.0%             | 
+| "Renault"       | 14.0%             | 
+| "Mazda"         | 13.33%            | 
+| "VW"            | 10.33%            | 
+| "Fiat"          | 9.0%              | 
+| "BWM"           | 7.0%              | 
++-----------------+-------------------+
+3 - Average price of the 30% most contacted listings
++-----------------+
+| Average price   |
++-----------------+
+| € 24645.71      | 
++-----------------+
+4 - The Top 5 most contacted listings per Month 
++----------+----------+------------+--------------------------+-------------------+---------------+-----------+
+| Month    | Ranking  | Listing Id | Total Amount of contacts | Make              | Selling Price | Mileage   |
++----------+----------+------------+--------------------------+-------------------+---------------+-----------+
+| January  | 1        | 1061       | 21                       |"Renault"          |€ 5641,-       |7000 KM    | 
+| January  | 2        | 1132       | 18                       |"Mercedes-Benz"    |€ 34490,-      |7000 KM    | 
+| January  | 3        | 1099       | 17                       |"BWM"              |€ 5914,-       |8500 KM    | 
+| January  | 4        | 1077       | 17                       |"Mercedes-Benz"    |€ 8007,-       |4000 KM    | 
+| January  | 5        | 1285       | 17                       |"Fiat"             |€ 28621,-      |2000 KM    | 
+|----------+----------+------------+--------------------------+-------------------+---------------+-----------|
+| February | 1        | 1271       | 37                       |"Mercedes-Benz"    |€ 47165,-      |6500 KM    | 
+| February | 2        | 1138       | 33                       |"Toyota"           |€ 13986,-      |8000 KM    | 
+| February | 3        | 1006       | 32                       |"Renault"          |€ 47446,-      |7500 KM    | 
+| February | 4        | 1235       | 32                       |"Mercedes-Benz"    |€ 5847,-       |5500 KM    | 
+| February | 5        | 1258       | 31                       |"Mazda"            |€ 44776,-      |1000 KM    | 
+|----------+----------+------------+--------------------------+-------------------+---------------+-----------|
+| March    | 1        | 1061       | 31                       |"Renault"          |€ 5641,-       |7000 KM    | 
+| March    | 2        | 1181       | 30                       |"Renault"          |€ 8933,-       |3500 KM    | 
+| March    | 3        | 1271       | 29                       |"Mercedes-Benz"    |€ 47165,-      |6500 KM    | 
+| March    | 4        | 1258       | 29                       |"Mazda"            |€ 44776,-      |1000 KM    | 
+| March    | 5        | 1235       | 29                       |"Mercedes-Benz"    |€ 5847,-       |5500 KM    | 
+|----------+----------+------------+--------------------------+-------------------+---------------+-----------|
+| April    | 1        | 1181       | 37                       |"Renault"          |€ 8933,-       |3500 KM    | 
+| April    | 2        | 1118       | 33                       |"Audi"             |€ 38382,-      |2000 KM    | 
+| April    | 3        | 1006       | 29                       |"Renault"          |€ 47446,-      |7500 KM    | 
+| April    | 4        | 1262       | 28                       |"Renault"          |€ 43778,-      |8000 KM    | 
+| April    | 5        | 1123       | 28                       |"VW"               |€ 39077,-      |7000 KM    | 
+|----------+----------+------------+--------------------------+-------------------+---------------+-----------|
+| May      | 1        | 1204       | 35                       |"Toyota"           |€ 36895,-      |3500 KM    | 
+| May      | 2        | 1098       | 32                       |"Toyota"           |€ 11345,-      |3500 KM    | 
+| May      | 3        | 1298       | 30                       |"Mazda"            |€ 15989,-      |6500 KM    | 
+| May      | 4        | 1018       | 29                       |"Renault"          |€ 33165,-      |3000 KM    | 
+| May      | 5        | 1275       | 27                       |"Mazda"            |€ 15705,-      |7000 KM    | 
+|----------+----------+------------+--------------------------+-------------------+---------------+-----------|
+| June     | 1        | 1258       | 18                       |"Mazda"            |€ 44776,-      |1000 KM    | 
+| June     | 2        | 1006       | 15                       |"Renault"          |€ 47446,-      |7500 KM    | 
+| June     | 3        | 1037       | 14                       |"Fiat"             |€ 14940,-      |7000 KM    | 
+| June     | 4        | 1271       | 14                       |"Mercedes-Benz"    |€ 47165,-      |6500 KM    | 
+| June     | 5        | 1012       | 14                       |"Audi"             |€ 10286,-      |3000 KM    | 
++----------+----------+------------+--------------------------+-------------------+---------------+-----------+
+
+-
+Oleksii Voitenko
